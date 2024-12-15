@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Área de Administração</title>
+  <style>
+    body {
+      background-color: #F1D792;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      background-color: #FFD700;
+      padding: 10px;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    main {
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      background-color: #FFD700;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    table {
+      width: 80%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background-color: #FFD700;
+    }
+    button {
+  padding: 5px 10px;
+  margin: 5px;
+  background-color: #FFFFFF;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f1f1f1;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Área de Administração</h1>
+    <h3>Receitas da Ana</h3>
+  </header>
+
+  <nav>
+    <ul>
+      <button><li><a href="index.html">Página Inicial</a></li></button>
+      <button><li><a href="receitas.html">Receitas</a></li></button>
+      <button><li><a href="listaDeCadastros.html">Usuários Cadastrados</a></li></button>
+      <button><li><a href="admin.html">Admin</a></li></button>
+    </ul>
+  </nav>
+
+  <main>
+    <h2>Lista de Receitas Cadastrados</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Receitas</th>
+          <th>Ingredientes</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Queijo Coalho</td>
+          <td>4 litros de leite integral (fresquinho e de preferência de boa qualidade)
+            1/4 de tablete de coalho (aproximadamente 1,5 ml de coalho líquido)
+            3 colheres de sopa de sal
+            1/4 de xícara de vinagre branco (para ajudar no processo de coagulação)</td>
+          <td>
+            <button onclick="editarUsuario(1)">Editar</button>
+            <button onclick="apagarUsuario(1)">Apagar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Ricota</td>
+          <td>1,5 litro de leite integral tipo A
+            2 colheres (sopa) de caldo de limão peneirado</td>
+          <td>
+            <button onclick="editarUsuario(2)">Editar</button>
+            <button onclick="apagarUsuario(2)">Apagar</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Iorgute caseiro</td>
+          <td>1 litro de leite integral tipo A
+            1 pote de iogurte natural sem açúcar (170 g)</td>
+          <td>
+            <button onclick="editarUsuario(3)">Editar</button>
+            <button onclick="apagarUsuario(3)">Apagar</button>
+          </td>
+        </tr>
+        
+    </table>
+  </main>
+
+  <footer>
+    Desenvolvido por Ana Vitória | <a href="autora.html">Sobre a autora</a>
+  </footer>
+
+  <script>
+    function editarUsuario(id) {
+      alert("Editar usuário com ID: " + id);
+      
+    }
+
+    function apagarUsuario(id) {
+      if (confirm("Tem certeza que deseja apagar o usuário com ID: " + id + "?")) {
+        alert("Usuário com ID " + id + " apagado.");
+        
+      }
+    }
+  </script>
+
+</body>
+</html>

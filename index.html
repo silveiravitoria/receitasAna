@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    
+   
 <body bgcolor="#F1D792">
       
 <head>
@@ -10,31 +10,100 @@
 </head>
 
 <body>
- 
+  <style>
+    body {
+      background-color: #F1D792;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      text-align: center;
+      background-color: #FFD700;
+      padding: 10px;
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      margin: 20px 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    main {
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      background-color: #FFD700;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      margin: 0 auto;
+    }
+    input[type="text"], input[type="password"] {
+      width: 70%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="submit"] {
+      background-color: #FFD700;
+      color: black;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+    input[type="submit"]:hover {
+      background-color: #FFCC00;
+    }
+  </style>
   <header>
     <h1>Receitas da Ana</h1>
     <div style="text-align: center;"><h3>Home</h3></div>
     
   </header>
   <nav>
-    <ul>
-        <button><li><a href="autora.html">Autora</a></li></button><br><br>
-        <button><li><a href="receitas.html">Receitas</a></li></ul></button>
-    </ul>
+    <ul >
+        <button><li><a href="admin.html">Admin</a></li></button>
+        <button><li><a href="cadastro.html">Cadastro</a></li></button>
+        <button><li><a href="login.html">Login</a></li></button>
+        <button><li><a href="autora.html">Autora</a></li></button>
+        <button><li><a href="receitas.html">Receitas</a></li></button>
+      </ul>
   </nav>
   <main>
     <section>
-        <h1>Delícias do dia</h1>
+        <h1>Delícias do dia</h1><br>
       <div>
         <img src="image/download.jpg" alt="Queijo coalho" width="320" height="205" />
         <img src="image/ricota.jpeg" alt="Ricota" width="320" height="205" />
         <img src="image/iogurte.webp" alt="Iorgute natural" width="320" height="205" />
         <img src="image/iogurteDeMorango.jpg" alt="Iorgute De morango natural" width="320" height="205" />
-        <figcaption> Queijo coalho, Ricota, Iorgute Natural, Iorgute de morango.</figcaption>
+        <figcaption> Queijo coalho, Ricota, Iorgute Natural, Iorgute de morango.</figcaption><br>
 
       </div>
       <article>
-        <h1>Casadinhos com café</h1>
+        <h1>Casadinhos com café</h1><br>
         <div>
           <img src="image/panquecadoce.jpg" alt="Panqueca doce" width="320" height="205" />
           <img src="image/croissant.jpeg" alt="Croissant" width="320" height="205" />
@@ -47,7 +116,7 @@
     </section>
   </main>
   <footer>
-    Desenvolvido por Ana Vitória
+    Desenvolvido por Ana Vitória | <a href="autora.html">Sobre a autora</a>
   </footer>
 </body>
 
