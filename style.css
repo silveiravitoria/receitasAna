@@ -1,8 +1,100 @@
-p {
-    background-color: blue;
-  }
-  style image {
-    position: absolute;
-    width: 150px;
-    height: auto;
-  }
+/* Reset de margens e padding para todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Para que padding e margin não afetem o tamanho total */
+}
+
+/* Definindo o espaçamento interno (padding) e margens para o corpo */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--cor-fundo); /* Usando a variável */
+  padding: 20px;
+}
+
+header, nav, footer, main {
+  margin-bottom: 20px; /* Espaço entre seções */
+}
+
+/* Define espaçamento interno para os links de navegação */
+nav a {
+  padding: 10px 20px;
+  margin: 5px;
+}
+/* Borda para tabelas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Borda para botões */
+button {
+  padding: 10px;
+  border: 2px solid var(--cor-borda);
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--cor-hover);
+}
+
+/* Borda para imagens */
+img {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+}
+:root {
+  /* Definindo as cores como variáveis */
+  --cor-fundo: #F1D792;
+  --cor-primaria: #FFD700;
+  --cor-secundaria: #FFCC00;
+  --cor-borda: #ccc;
+  --cor-hover: #FFCC00;
+  --cor-texto: #333;
+}
+
+/* Aplicando as variáveis */
+body {
+  background-color: var(--cor-fundo);
+}
+
+header {
+  background-color: var(--cor-primaria);
+}
+
+footer {
+  background-color: var(--cor-primaria);
+}
+
+nav a {
+  color: var(--cor-texto);
+}
+
+button {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto);
+}
+
+button:hover {
+  background-color: var(--cor-secundaria);
+}
+:root {
+  --font-family-base: 'Arial', sans-serif;
+  --font-size-base: 16px;
+  --font-size-heading: 24px;
+}
+
+/* Aplicando variáveis de tipografia */
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+h1, h2, h3 {
+  font-size: var(--font-size-heading);
+}
