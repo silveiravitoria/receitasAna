@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-   
-<body bgcolor="#F1D792">
-      
-<head>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <title>Receitas da Ana</title>
-  <meta charset="utf-8" />
-  
-</head>
 
-<body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas da Ana</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <style>
     body {
       background-color: #F1D792;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
+
     header {
       text-align: center;
       background-color: #FFD700;
       padding: 10px;
     }
+
     h1 {
       margin: 0;
     }
+
+    h3 {
+      margin: 0;
+    }
+
     nav {
       margin: 20px 0;
       text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
     }
+
     nav ul {
       list-style-type: none;
       padding: 0;
     }
+
     nav li {
       display: inline;
-      margin: 0 10px;
     }
+
     nav a {
       text-decoration: none;
       color: black;
       font-weight: bold;
     }
+
+    .menu-btn {
+      display: none;
+      cursor: pointer;
+    }
+
     main {
       text-align: center;
+      padding: 20px;
     }
+
     footer {
       text-align: center;
       background-color: #FFD700;
       padding: 10px;
       margin-top: 20px;
     }
+
     form {
       background-color: #fff;
       padding: 20px;
@@ -58,13 +77,16 @@
       width: 400px;
       margin: 0 auto;
     }
-    input[type="text"], input[type="password"] {
+
+    input[type="text"],
+    input[type="password"] {
       width: 70%;
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
+
     input[type="submit"] {
       background-color: #FFD700;
       color: black;
@@ -74,51 +96,127 @@
       cursor: pointer;
       width: 100%;
     }
+
     input[type="submit"]:hover {
       background-color: #FFCC00;
     }
+
+    /* Responsividade para as imagens */
+    .recipe-images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .recipe-images img {
+      width: 320px;
+      height: 205px;
+      object-fit: cover;
+    }
+
+    /* Estilos para o menu responsivo */
+    nav ul {
+      display: flex;
+      gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .recipe-images img {
+        width: 100%;
+      }
+
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav:hover ul {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+      }
+
+      nav li {
+        text-align: center;
+        margin: 10px 0;
+      }
+    }
+
+    /* Esconde o menu no layout de impressão */
+    @media print {
+      nav,
+      .menu-btn {
+        display: none;
+      }
+    }
+
   </style>
+</head>
+
+<body>
+
   <header>
     <h1>Receitas da Ana</h1>
-    <div style="text-align: center;"><h3>Home</h3></div>
-    
+    <h3>Home</h3>
   </header>
+
   <nav>
-    <ul >
-        <button><li><a href="admin.html">Admin</a></li></button>
-        <button><li><a href="cadastro.html">Cadastro</a></li></button>
-        <button><li><a href="login.html">Login</a></li></button>
-        <button><li><a href="autora.html">Autora</a></li></button>
-        <button><li><a href="receitas.html">Receitas</a></li></button>
-      </ul>
+    <button class="menu-btn" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <ul>
+      <li><a href="admin.html">Admin</a></li>
+      <li><a href="cadastro.html">Cadastro</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="autora.html">Autora</a></li>
+      <li><a href="receitas.html">Receitas</a></li>
+    </ul>
   </nav>
+
   <main>
     <section>
-        <h1>Delícias do dia</h1><br>
-      <div>
-        <img src="image/download.jpg" alt="Queijo coalho" width="320" height="205" />
-        <img src="image/ricota.jpeg" alt="Ricota" width="320" height="205" />
-        <img src="image/iogurte.webp" alt="Iorgute natural" width="320" height="205" />
-        <img src="image/iogurteDeMorango.jpg" alt="Iorgute De morango natural" width="320" height="205" />
-        <figcaption> Queijo coalho, Ricota, Iorgute Natural, Iorgute de morango.</figcaption><br>
-
+      <h1>Delícias do dia</h1>
+      <div class="recipe-images">
+        <img src="image/download.jpg" alt="Queijo coalho" />
+        <img src="image/ricota.jpeg" alt="Ricota" />
+        <img src="image/iogurte.webp" alt="Iorgute natural" />
+        <img src="image/iogurteDeMorango.jpg" alt="Iorgute De morango natural" />
       </div>
-      <article>
-        <h1>Casadinhos com café</h1><br>
-        <div>
-          <img src="image/panquecadoce.jpg" alt="Panqueca doce" width="320" height="205" />
-          <img src="image/croissant.jpeg" alt="Croissant" width="320" height="205" />
-          <img src="image/cafeBaiano.jpeg" alt="Café baiano" width="320" height="205" />
-          <img src="image/paoComOvo.jpeg" alt="Pão com ovo" width="320" height="205" />
+      <figcaption>Queijo coalho, Ricota, Iorgute Natural, Iorgute de morango.</figcaption>
 
+      <article>
+        <h1>Casadinhos com café</h1>
+        <div class="recipe-images">
+          <img src="image/panquecadoce.jpg" alt="Panqueca doce" />
+          <img src="image/croissant.jpeg" alt="Croissant" />
+          <img src="image/cafeBaiano.jpeg" alt="Café baiano" />
+          <img src="image/paoComOvo.jpeg" alt="Pão com ovo" />
         </div>
-        <p>Receitas rapidas para uma manhã super gostosa.</p>
+        <p>Receitas rápidas para uma manhã super gostosa.</p>
       </article>
     </section>
   </main>
+
   <footer>
     Desenvolvido por Ana Vitória | <a href="autora.html">Sobre a autora</a>
   </footer>
+
+  <script>
+    // Função para alternar o menu no mobile
+    function toggleMenu() {
+      const menu = document.querySelector('nav ul');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </body>
 
 </html>
