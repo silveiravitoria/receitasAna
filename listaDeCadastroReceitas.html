@@ -3,21 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <title>Área de Administração</title>
+  <link rel="stylesheet" href="https://unpkg.com/open-props" />
   <style>
     body {
-      background-color: #F1D792;
-      font-family: Arial, sans-serif;
+      background-color: var(--sand-3);
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
     }
     header {
       text-align: center;
-      background-color: #FFD700;
-      padding: 10px;
+      background-color: var(--yellow-5);
+      padding: var(--size-3);
     }
     h1 {
       margin: 0;
     }
     nav {
-      margin: 20px 0;
+      margin: var(--size-4) 0;
       text-align: center;
     }
     nav ul {
@@ -26,48 +29,52 @@
     }
     nav li {
       display: inline;
-      margin: 0 10px;
+      margin: 0 var(--size-3);
     }
     nav a {
       text-decoration: none;
-      color: black;
+      color: var(--black);
       font-weight: bold;
     }
     main {
       text-align: center;
+      padding: var(--size-5) 0;
     }
     footer {
       text-align: center;
-      background-color: #FFD700;
-      padding: 10px;
-      margin-top: 20px;
+      background-color: var(--yellow-5);
+      padding: var(--size-3);
+      margin-top: var(--size-4);
+    }
+    footer a {
+      color: var(--black);
+      text-decoration: none;
     }
     table {
       width: 80%;
-      margin: 20px auto;
+      margin: var(--size-4) auto;
       border-collapse: collapse;
     }
     th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
+      padding: var(--size-2);
+      border: 1px solid var(--gray-5);
       text-align: center;
     }
     th {
-      background-color: #FFD700;
+      background-color: var(--yellow-5);
     }
     button {
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #FFFFFF;
-  color: black;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #f1f1f1;
-}
+      padding: var(--size-1) var(--size-2);
+      margin: var(--size-2);
+      background-color: var(--white);
+      color: var(--black);
+      border: 1px solid var(--gray-5);
+      border-radius: var(--radius-2);
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: var(--gray-0);
+    }
   </style>
 </head>
 <body>
@@ -79,15 +86,15 @@ button:hover {
 
   <nav>
     <ul>
-      <button><li><a href="index.html">Página Inicial</a></li></button>
-      <button><li><a href="receitas.html">Receitas</a></li></button>
-      <button><li><a href="listaDeCadastros.html">Usuários Cadastrados</a></li></button>
-      <button><li><a href="admin.html">Admin</a></li></button>
+      <li><a href="index.html"><button>Página Inicial</button></a></li>
+      <li><a href="receitas.html"><button>Receitas</button></a></li>
+      <li><a href="listaDeCadastros.html"><button>Usuários Cadastrados</button></a></li>
+      <li><a href="admin.html"><button>Admin</button></a></li>
     </ul>
   </nav>
 
   <main>
-    <h2>Lista de Receitas Cadastrados</h2>
+    <h2>Lista de Receitas Cadastradas</h2>
 
     <table>
       <thead>
@@ -102,10 +109,7 @@ button:hover {
         <tr>
           <td>1</td>
           <td>Queijo Coalho</td>
-          <td>4 litros de leite integral (fresquinho e de preferência de boa qualidade)
-            1/4 de tablete de coalho (aproximadamente 1,5 ml de coalho líquido)
-            3 colheres de sopa de sal
-            1/4 de xícara de vinagre branco (para ajudar no processo de coagulação)</td>
+          <td>4 litros de leite integral (fresquinho e de preferência de boa qualidade)<br>1/4 de tablete de coalho (aproximadamente 1,5 ml de coalho líquido)<br>3 colheres de sopa de sal<br>1/4 de xícara de vinagre branco (para ajudar no processo de coagulação)</td>
           <td>
             <button onclick="editarUsuario(1)">Editar</button>
             <button onclick="apagarUsuario(1)">Apagar</button>
@@ -114,8 +118,7 @@ button:hover {
         <tr>
           <td>2</td>
           <td>Ricota</td>
-          <td>1,5 litro de leite integral tipo A
-            2 colheres (sopa) de caldo de limão peneirado</td>
+          <td>1,5 litro de leite integral tipo A<br>2 colheres (sopa) de caldo de limão peneirado</td>
           <td>
             <button onclick="editarUsuario(2)">Editar</button>
             <button onclick="apagarUsuario(2)">Apagar</button>
@@ -123,15 +126,14 @@ button:hover {
         </tr>
         <tr>
           <td>3</td>
-          <td>Iorgute caseiro</td>
-          <td>1 litro de leite integral tipo A
-            1 pote de iogurte natural sem açúcar (170 g)</td>
+          <td>Iogurte caseiro</td>
+          <td>1 litro de leite integral tipo A<br>1 pote de iogurte natural sem açúcar (170 g)</td>
           <td>
             <button onclick="editarUsuario(3)">Editar</button>
             <button onclick="apagarUsuario(3)">Apagar</button>
           </td>
         </tr>
-        
+      </tbody>
     </table>
   </main>
 
@@ -142,13 +144,11 @@ button:hover {
   <script>
     function editarUsuario(id) {
       alert("Editar usuário com ID: " + id);
-      
     }
 
     function apagarUsuario(id) {
       if (confirm("Tem certeza que deseja apagar o usuário com ID: " + id + "?")) {
         alert("Usuário com ID " + id + " apagado.");
-        
       }
     }
   </script>

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
    
-<body bgcolor="#F1D792">
-      
 <head>
   <title>Receitas da Ana</title>
   <meta charset="utf-8" />
-  
-</head>
-
-<body>
+  <link rel="stylesheet" href="https://unpkg.com/open-props" />
   <style>
     body {
-      background-color: #F1D792;
-      font-family: Arial, sans-serif;
+      background-color: var(--sand-3);
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
     }
     header {
       text-align: center;
-      background-color: #FFD700;
-      padding: 10px;
+      background-color: var(--yellow-5);
+      padding: var(--size-3);
     }
     h1 {
       margin: 0;
     }
+    h3 {
+      margin-top: var(--size-2);
+    }
     nav {
-      margin: 20px 0;
+      margin: var(--size-4) 0;
       text-align: center;
     }
     nav ul {
@@ -33,64 +33,73 @@
     }
     nav li {
       display: inline;
-      margin: 0 10px;
+      margin: 0 var(--size-3);
     }
     nav a {
       text-decoration: none;
-      color: black;
+      color: var(--black);
       font-weight: bold;
     }
     main {
       text-align: center;
+      padding: var(--size-5) 0;
     }
     footer {
       text-align: center;
-      background-color: #FFD700;
-      padding: 10px;
-      margin-top: 20px;
+      background-color: var(--yellow-5);
+      padding: var(--size-3);
+      margin-top: var(--size-4);
+    }
+    footer a {
+      color: var(--black);
+      text-decoration: none;
     }
     form {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: var(--gray-0);
+      padding: var(--size-4);
+      border-radius: var(--radius-3);
+      box-shadow: var(--shadow-3);
       width: 400px;
       margin: 0 auto;
     }
     input[type="text"], input[type="password"] {
       width: 70%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      padding: var(--size-2);
+      margin: var(--size-2) 0;
+      border: 1px solid var(--gray-5);
+      border-radius: var(--radius-2);
     }
     input[type="submit"] {
-      background-color: #FFD700;
-      color: black;
-      padding: 10px 15px;
+      background-color: var(--yellow-5);
+      color: var(--black);
+      padding: var(--size-2) var(--size-3);
       border: none;
-      border-radius: 5px;
+      border-radius: var(--radius-2);
       cursor: pointer;
       width: 100%;
     }
     input[type="submit"]:hover {
-      background-color: #FFCC00;
+      background-color: var(--yellow-6);
     }
   </style>
+</head>
+
+<body>
   <header>
     <h1>Receitas da Ana</h1>
     <div style="text-align: center;"><h3>Home</h3></div>
-    
   </header>
+
   <nav>
-    <ul >
-        <button><li><a href="admin.html">Admin</a></li></button>
-        <button><li><a href="cadastro.html">Cadastro</a></li></button>
-        <button><li><a href="login.html">Login</a></li></button>
-        <button><li><a href="autora.html">Autora</a></li></button>
-        <button><li><a href="receitas.html">Receitas</a></li></button>
-      </ul>
+    <ul>
+        <li><a href="admin.html"><button>Admin</button></a></li>
+        <li><a href="cadastro.html"><button>Cadastro</button></a></li>
+        <li><a href="login.html"><button>Login</button></a></li>
+        <li><a href="autora.html"><button>Autora</button></a></li>
+        <li><a href="receitas.html"><button>Receitas</button></a></li>
+    </ul>
   </nav>
+
   <main>
     <section>
         <h1>Delícias do dia</h1><br>
@@ -100,7 +109,6 @@
         <img src="image/iogurte.webp" alt="Iorgute natural" width="320" height="205" />
         <img src="image/iogurteDeMorango.jpg" alt="Iorgute De morango natural" width="320" height="205" />
         <figcaption> Queijo coalho, Ricota, Iorgute Natural, Iorgute de morango.</figcaption><br>
-
       </div>
       <article>
         <h1>Casadinhos com café</h1><br>
@@ -109,12 +117,12 @@
           <img src="image/croissant.jpeg" alt="Croissant" width="320" height="205" />
           <img src="image/cafeBaiano.jpeg" alt="Café baiano" width="320" height="205" />
           <img src="image/paoComOvo.jpeg" alt="Pão com ovo" width="320" height="205" />
-
         </div>
-        <p>Receitas rapidas para uma manhã super gostosa.</p>
+        <p>Receitas rápidas para uma manhã super gostosa.</p>
       </article>
     </section>
   </main>
+
   <footer>
     Desenvolvido por Ana Vitória | <a href="autora.html">Sobre a autora</a>
   </footer>

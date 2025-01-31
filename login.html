@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <title>Área de Administração</title>
+
+  <!-- Importando Open Props -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-props@1.2.3/dist/open-props.min.css">
+
   <style>
     body {
-      background-color: #F1D792;
-      font-family: Arial, sans-serif;
+      background-color: var(--color-neutral-100); /* Usando a cor neutra do Open Props */
+      font-family: var(--font-sans); /* Usando a fonte sans-serif do Open Props */
     }
     header {
       text-align: center;
-      background-color: #FFD700;
+      background-color: var(--color-yellow-500); /* Cor amarela do Open Props */
       padding: 10px;
     }
     h1 {
@@ -30,7 +34,7 @@
     }
     nav a {
       text-decoration: none;
-      color: black;
+      color: var(--color-neutral-900); /* Cor preta do Open Props */
       font-weight: bold;
     }
     main {
@@ -38,12 +42,12 @@
     }
     footer {
       text-align: center;
-      background-color: #FFD700;
+      background-color: var(--color-yellow-500); /* Cor amarela do Open Props */
       padding: 10px;
       margin-top: 20px;
     }
     form {
-      background-color: #fff;
+      background-color: var(--color-neutral-0); /* Cor branca do Open Props */
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -54,12 +58,12 @@
       width: 70%;
       padding: 10px;
       margin: 10px 0;
-      border: 1px solid #ccc;
+      border: 1px solid var(--color-neutral-300); /* Cor neutra do Open Props */
       border-radius: 5px;
     }
     input[type="submit"] {
-      background-color: #FFD700;
-      color: black;
+      background-color: var(--color-yellow-500); /* Cor amarela do Open Props */
+      color: var(--color-neutral-900); /* Cor preta do Open Props */
       padding: 10px 15px;
       border: none;
       border-radius: 5px;
@@ -67,7 +71,7 @@
       width: 100%;
     }
     input[type="submit"]:hover {
-      background-color: #FFCC00;
+      background-color: var(--color-yellow-400); /* Cor amarela mais clara do Open Props */
     }
   </style>
 </head>

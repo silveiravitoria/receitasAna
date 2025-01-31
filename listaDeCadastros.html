@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <title>Área de Administração</title>
+
+  <!-- Importando Open Props -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-props@1.2.3/dist/open-props.min.css">
+
   <style>
     body {
-      background-color: #F1D792;
-      font-family: Arial, sans-serif;
+      background-color: var(--color-neutral-100); /* Usando cor do Open Props */
+      font-family: var(--font-sans); /* Usando fonte sans-serif do Open Props */
     }
     header {
       text-align: center;
-      background-color: #FFD700;
+      background-color: var(--color-yellow-500); /* Substituindo pela cor do Open Props */
       padding: 10px;
     }
     h1 {
@@ -30,7 +34,7 @@
     }
     nav a {
       text-decoration: none;
-      color: black;
+      color: var(--color-neutral-900); /* Usando cor do Open Props */
       font-weight: bold;
     }
     main {
@@ -38,7 +42,7 @@
     }
     footer {
       text-align: center;
-      background-color: #FFD700;
+      background-color: var(--color-yellow-500); /* Usando a cor do Open Props */
       padding: 10px;
       margin-top: 20px;
     }
@@ -49,25 +53,25 @@
     }
     th, td {
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid var(--color-neutral-300); /* Cor neutra do Open Props */
       text-align: center;
     }
     th {
-      background-color: #FFD700;
+      background-color: var(--color-yellow-500); /* Cor de fundo da header da tabela */
     }
     button {
-  padding: 5px 10px;
-  margin: 5px;
-  background-color: #FFFFFF;
-  color: black;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: pointer;
-}
+      padding: 5px 10px;
+      margin: 5px;
+      background-color: var(--color-neutral-0); /* Usando cor neutra */
+      color: var(--color-neutral-900); /* Usando cor de texto neutra */
+      border: 1px solid var(--color-neutral-300); /* Cor de borda */
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-button:hover {
-  background-color: #f1f1f1;
-}
+    button:hover {
+      background-color: var(--color-neutral-200); /* Hover com cor neutra */
+    }
   </style>
 </head>
 <body>
@@ -121,7 +125,7 @@ button:hover {
         <tr>
           <td>3</td>
           <td>Grãos</td>
-          <td>Grãos@café.com</td>
+          <td>Graos@cafe.com</td>
           <td>
             <button onclick="editarUsuario(3)">Editar</button>
             <button onclick="apagarUsuario(3)">Apagar</button>
@@ -138,13 +142,11 @@ button:hover {
   <script>
     function editarUsuario(id) {
       alert("Editar usuário com ID: " + id);
-      
     }
 
     function apagarUsuario(id) {
       if (confirm("Tem certeza que deseja apagar o usuário com ID: " + id + "?")) {
         alert("Usuário com ID " + id + " apagado.");
-        
       }
     }
   </script>

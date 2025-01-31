@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <body bgcolor="#F1D792">
-
 <head>
-  <title>Receitas</title>
   <meta charset="utf-8" />
+  <title>Receitas</title>
+
+  <!-- Importando Open Props -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/open-props@1.2.3/dist/open-props.min.css">
+
+  <style>
+    body {
+      background-color: var(--color-neutral-100); /* Cor neutra de fundo */
+      font-family: var(--font-sans); /* Fonte sans-serif */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      background-color: var(--color-yellow-500); /* Cor amarela */
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-neutral-900); /* Cor de texto escura */
+      font-weight: bold;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      text-align: center;
+    }
+
+    img {
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: var(--color-neutral-900); /* Cor escura para títulos */
+    }
+
+    p {
+      font-size: 1rem;
+      text-align: justify;
+      line-height: 1.6;
+      color: var(--color-neutral-800); /* Cor neutra para texto */
+    }
+
+    footer {
+      text-align: center;
+      background-color: var(--color-yellow-500); /* Cor de fundo amarela */
+      padding: 10px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
@@ -12,60 +87,55 @@
   <header>
     <h1>Receitas da Ana</h1>
   </header>
+
   <nav>
     <ul>
-    <button> <li><a href="index.html">Início</a></li></button><br><br>
+      <button><li><a href="index.html">Início</a></li></button><br><br>
       <button><li><a href="autora.html">Autora</a></li></button>
     </ul>
   </nav>
+
   <main>
     <section>
-      <div style="text-align: center;"><h1>Receita de Queijo Coalho Caseiro</h1></div>
-      
-      <div style="text-align: center;">
-        <img src="image/download.jpg" alt="queijo coalho" width="320" height="205" />
+      <div>
+        <h1>Receita de Queijo Coalho Caseiro</h1>
+      </div>
+
+      <div>
+        <img src="image/download.jpg" alt="Queijo Coalho" width="320" height="205" />
         <p><h2>Ingredientes:</h2>
           4 litros de leite integral (fresquinho e de preferência de boa qualidade)<br>
           1/4 de tablete de coalho (aproximadamente 1,5 ml de coalho líquido)<br>
           3 colheres de sopa de sal<br>
           1/4 de xícara de vinagre branco (para ajudar no processo de coagulação)<br>
-          </p>
-          <h2>Modo de Preparo:</h2>
-         <div style="text-align: justify;"> 
-          <p> O leite: Em uma panela grande, aqueça o leite até atingir cerca de 38°C,<br>
-           mexendo de vez em quando para não ferver.<br>
-           O leite deve estar morno, sem borbulhas.<br>
-          Adicionando o vinagre: Adicione o vinagre ao leite morno e mexa bem.<br>
+        </p>
+        <h2>Modo de Preparo:</h2>
+        <div style="text-align: justify;">
+          <p>O leite: Em uma panela grande, aqueça o leite até atingir cerca de 38°C, mexendo de vez em quando para não ferver. O leite deve estar morno, sem borbulhas.<br>
           O vinagre ajuda a acidificar o leite, promovendo a coagulação.<br>
-          Preparando o coalho: Dissolva o coalho em um pouco de água fria (cerca de 1/4 de xícara).<br>
-           Após dissolver, adicione o coalho diluído ao leite morno e mexa suavemente por alguns segundos.<br>
-          Coagulação: Deixe o leite repousar por cerca de 40 minutos, sem mexer, para que se forme a coalhada.<br>
-           Após esse tempo, você verá que o leite se separou em dois componentes: o soro e a coalhada.<br>
-          Cortando a coalhada: Com uma faca bem afiada, corte a coalhada em cubos de aproximadamente 2 cm, formando pequenos pedaços.<br>
-           Deixe descansar por mais 10 minutos.<br>
-          Aquecendo a coalhada: Coloque a panela em fogo baixo e aqueça a coalhada lentamente, mexendo de vez em quando, até que os pedaços fiquem mais firmes e um pouco maiores.<br>
-          Escorrendo o soro: Com uma colher ou concha, retire os pedaços de coalhada e coloque-os em um pano limpo ou forma para queijo.<br>
-           Aperte levemente para que o soro seja drenado.</p>
+          Dissolva o coalho em um pouco de água fria (cerca de 1/4 de xícara) e adicione ao leite morno, mexendo suavemente por alguns segundos.<br>
+          Deixe o leite repousar por cerca de 40 minutos para que se forme a coalhada.<br>
+          Com uma faca bem afiada, corte a coalhada em cubos de aproximadamente 2 cm. Deixe descansar por mais 10 minutos.<br>
+          Coloque a panela em fogo baixo e aqueça a coalhada lentamente, mexendo de vez em quando, até que os pedaços fiquem mais firmes e maiores.<br>
+          Retire os pedaços de coalhada e coloque-os em um pano limpo ou forma para queijo. Aperte levemente para que o soro seja drenado.</p>
+        </div>
       </div>
-      </div>
+
       <h1>Outras receitas</h1>
       <div>
         <img src="image/panquecadoce.jpg" alt="Panqueca doce" width="320" height="205" />
         <img src="image/croissant.jpeg" alt="Croissant" width="320" height="205" />
         <img src="image/cafeBaiano.jpeg" alt="Café baiano" width="320" height="205" />
         <img src="image/paoComOvo.jpeg" alt="Pão com ovo" width="320" height="205" />
-
       </div><br>
-      
-      <article>
-        
-        
-      </article>
+
+      <article></article>
     </section>
   </main>
+
   <footer>
     Desenvolvido por Ana Vitória
   </footer>
-</body>
 
+</body>
 </html>

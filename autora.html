@@ -1,43 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <body bgcolor="#F1D792">
-
+   
 <head>
   <title>Receitas da Ana</title>
   <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://unpkg.com/open-props" />
+  <style>
+    body {
+      background-color: var(--sand-3);
+      font-family: var(--font-sans);
+    }
+    header {
+      text-align: center;
+      background-color: var(--yellow-5);
+      padding: var(--size-3);
+    }
+    h1 {
+      margin: 0;
+    }
+    nav {
+      margin: var(--size-4) 0;
+      text-align: center;
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav li {
+      display: inline;
+      margin: 0 var(--size-2);
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--black);
+      font-weight: bold;
+    }
+    main {
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      background-color: var(--yellow-5);
+      padding: var(--size-3);
+      margin-top: var(--size-4);
+    }
+    section {
+      margin: var(--size-4);
+    }
+    article img {
+      max-width: 100%;
+      border-radius: var(--radius-3);
+      box-shadow: var(--shadow-3);
+    }
+  </style>
 </head>
 
 <body>
-
   <header>
     <h1>Sobre mim - Ana Vitória Silveira Gomes</h1>
   </header>
+  
   <nav>
     <ul>
-       <button> <li><a href="index.html">Início</a></li></button><br><br>
-    <button><li><a href="receitas.html">Receitas</a></li></button>
+      <button><a href="index.html">Início</a></button><br><br>
+      <button><a href="receitas.html">Receitas</a></button>
     </ul>
   </nav>
+  
   <main>
     <section>
-      <h1>Quem sou ?</h1>
+      <h1>Quem sou?</h1>
       <div>
-       <h3>Sou uma Estudante do Instituto Federal de Tianguá,<br>
-         aluna do curso de informática para internet<br>
-        e estou desenolvendo uma página Web utilizando JavaScript, Css e HTML.
-       </h3>
-        
+        <h3>Sou uma Estudante do Instituto Federal de Tianguá,<br>
+          aluna do curso de informática para internet<br>
+          e estou desenvolvendo uma página Web utilizando JavaScript, CSS e HTML.
+        </h3>
       </div>
       <article>
-        
-        
-       <div> <img src="image/informatica.png" alt="informatica"></div>
+        <div><img src="image/informatica.png" alt="informatica"></div>
       </article>
     </section>
   </main>
+  
   <footer>
     Desenvolvido por Ana Vitória
   </footer>
 </body>
-
 </html>
